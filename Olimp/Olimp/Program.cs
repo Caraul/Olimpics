@@ -6,12 +6,9 @@ namespace Olimp
     {
         static void Main(string[] args)
         {
-            int i = 0, v = 0, x = 0, l = 0, c = 0, d = 0, m = 0, num;
-            Console.WriteLine("Какую римскую цифру?(I, V, X, L, C, D, M)");
-            string n = Console.ReadLine();
-            for (int f = 101; f < 201; f++)
+            int i = 0, v = 0, x = 0, l = 0, c = 0, d = 0, m = 0, num = 0; // оставил для того, что если буду переделывать в другой день
+            for (int cycle = 101; cycle < 201; cycle++, num = ((cycle + cycle * cycle) / 2) % 2048)
             {
-                num = ((f + f * f) / 2) % 2048;
                 while (num != 0)
                 {
                     if (num >= 1000)
@@ -81,34 +78,8 @@ namespace Olimp
                     }
                 }
             }
-            if (n == "I")
-            {
-                Console.WriteLine(i);
-            }
-            else if (n == "V")
-            {
-                Console.WriteLine(v);
-            }
-            else if (n == "X")
-            {
-                Console.WriteLine(x);
-            }
-            else if (n == "L")
-            {
-                Console.WriteLine(l);
-            }
-            else if (n == "C")
-            {
-                Console.WriteLine(c);
-            }
-            else if (n == "D")
-            {
-                Console.WriteLine(d);
-            }
-            else if (n == "M")
-            {
-                Console.WriteLine(m);
-            }
+            Console.WriteLine("D");
+            Console.WriteLine(d);
         }
     }
 }
