@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olimp", "Olimp\Olimp.csproj", "{328FCC41-E681-436F-A762-6C57C3292C5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328FCC41-E681-436F-A762-6C57C3292C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328FCC41-E681-436F-A762-6C57C3292C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328FCC41-E681-436F-A762-6C57C3292C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328FCC41-E681-436F-A762-6C57C3292C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85828F34-760F-487C-A6EB-533B83E30B1A}
+	EndGlobalSection
+EndGlobal
