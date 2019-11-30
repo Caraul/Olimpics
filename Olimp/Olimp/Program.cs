@@ -20,10 +20,16 @@ namespace Olimp
         }
         static void count()
         {
-             
+
             if (num >= 1000)
             {
                 num -= 1000;
+                m++;
+            }
+            else if (num >= 900)
+            {
+                num -= 900;
+                c++;
                 m++;
             }
             else if (num >= 500)
