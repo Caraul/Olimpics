@@ -7,13 +7,13 @@ namespace Olimp2
         static public int DayOfWeek, month, DayOfMonth, weekday, weekend;
         static void Main(string[] args)
         {
-            prog(2018, 3);
+            prog(2018, 1);
         }
         static public void prog(int nyear, int nweekend)
         {
             month = 1;
             DayOfMonth = 1;
-            DayOfWeek = Day(nyear);
+            DayOfWeek = DayInWeek(nyear);
             NumOfBonusWeekend(nweekend, nyear);
             Console.WriteLine(DayOfMonth + " " + month);
         }
@@ -28,29 +28,33 @@ namespace Olimp2
                 {
                     weekday += 1;
                     DayOfMonth += 1;
-                    DayOfWeek = Day(nyear);
+                    DayOfWeek = DayInWeek(nyear);
                 }
                 else if (DayOfWeek == 6 || DayOfWeek == 7)
                 {
                     DayOfMonth += 1;
-                    DayOfWeek = Day(nyear);
+                    DayOfWeek = DayInWeek(nyear);
                 }
                 else
                 {
                     weekend += 1;
                     DayOfMonth += 1;
                     weekday = 0;
-                    DayOfWeek = Day(nyear);
+                    DayOfWeek = DayInWeek(nyear);
                 }
-                if(month == 0)
+                if (month == 0)
                 {
                     break;
                 }
             }
             return (DayOfMonth, month);
         }
-        static public int Day(int nyear)
+        static public int DayInWeek(int nyear)
         {
+            if (nyear < 1902 || nyear > 2037)
+            {
+                throw new Exception("WrongYear");
+            }
             if (DayOfMonth > System.DateTime.DaysInMonth(nyear, month))
             {
                 DayOfMonth = 1;
