@@ -12,27 +12,18 @@ namespace Hepta
         }
         public static string bit(int ind1, int ind2)
         {
-            int index1 = ind1, index2 = ind2;
-            if (index1 > index2)
-            {
-                index1 = ind2;
-                index2 = ind1;
-            }
-            var bit = new StringBuilder("");
             var hepta = InitHepta();
-            if (index1 != index2)
+            if (ind1 != ind2)
             {
-                bit = Cycle(index1, index2, hepta);
-                return bit.ToString();
+                return Cycle(ind1, ind2, hepta);
             }
             else
             {
-                bit.Append("0");
-                if (hepta.Contains(index1))
+                if (hepta.Contains(ind1))
                 {
-                    bit.Append("1");
+                    return "1";
                 }
-                return bit.ToString();
+                return "0";
             }
         }
         public static List<int> InitHepta()
@@ -45,28 +36,37 @@ namespace Hepta
             hepta.RemoveAt(hepta.Count - 1);
             return hepta;
         }
-        public static StringBuilder Cycle(int ind1, int ind2, List<int> hept)
+        public static string Cycle(int ind1, int ind2, List<int> hepta)
         {
-            int index1 = ind1, index2 = ind2;
-            var hepta = hept;
-            var bit = new StringBuilder("");
-            for (int index = index1 + 1; index < index2; index++)
+            var bit = new StringBuilder();
+            int BiggerIndex, SmallerIndex;
+            if (ind1 > ind2)
+            {
+                BiggerIndex = ind1;
+                SmallerIndex = ind2;
+            }
+            else
+            {
+                BiggerIndex = ind2;
+                SmallerIndex = ind1;
+            }
+            for (int index = SmallerIndex + 1; index < BiggerIndex; index++)
             {
                 var IsOne = false;
                 if (hepta.Contains(index))
                 {
                     IsOne = true;
                 }
-                if (IsOne == false)
-                {
-                    bit.Append("0");
-                }
-                else if (IsOne == true)
+                if (IsOne)
                 {
                     bit.Append("1");
                 }
+                else
+                {
+                    bit.Append("0");
+                }
             }
-            return bit;
+            return bit.ToString();
         }
     }
 }

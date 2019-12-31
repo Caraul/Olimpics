@@ -11,8 +11,8 @@ namespace HeptaTest
         public void HeptaArray()
         {
             List<int> hepta = Program.InitHepta();
-            Assert.AreEqual(hepta[7] == 1, true);
-            Assert.AreEqual(hepta[14] == 127, true);
+            Assert.IsTrue(hepta[7] == 1);
+            Assert.IsTrue(hepta[14] == 127);
         }
         [TestMethod]
         public void BitString()
