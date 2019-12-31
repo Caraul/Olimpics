@@ -13,18 +13,7 @@ namespace Hepta
         public static string bit(int ind1, int ind2)
         {
             var hepta = InitHepta();
-            if (ind1 != ind2)
-            {
-                return Cycle(ind1, ind2, hepta);
-            }
-            else
-            {
-                if (hepta.Contains(ind1))
-                {
-                    return "1";
-                }
-                return "0";
-            }
+            return Cycle(ind1, ind2, hepta);
         }
         public static List<int> InitHepta()
         {
@@ -40,6 +29,14 @@ namespace Hepta
         {
             var bit = new StringBuilder();
             int BiggerIndex, SmallerIndex;
+            if (ind1 == ind2)
+            {
+                if (hepta.Contains(ind1))
+                {
+                    return "1";
+                }
+                return "0";
+            }
             if (ind1 > ind2)
             {
                 BiggerIndex = ind1;
@@ -52,12 +49,7 @@ namespace Hepta
             }
             for (int index = SmallerIndex + 1; index < BiggerIndex; index++)
             {
-                var IsOne = false;
                 if (hepta.Contains(index))
-                {
-                    IsOne = true;
-                }
-                if (IsOne)
                 {
                     bit.Append("1");
                 }
