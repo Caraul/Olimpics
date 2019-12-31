@@ -18,6 +18,7 @@ namespace HeptaTest
         public void BitString()
         {
             Assert.AreEqual(Program.bit(-1, 9), "111010001");
+            Assert.AreEqual(Program.bit(9, -1), "111010001");
         }
         [TestMethod]
         public void BitStringOne()

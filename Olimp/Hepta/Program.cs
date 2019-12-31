@@ -31,11 +31,7 @@ namespace Hepta
             int BiggerIndex, SmallerIndex;
             if (ind1 == ind2)
             {
-                if (hepta.Contains(ind1))
-                {
-                    return "1";
-                }
-                return "0";
+                return hepta.Contains(ind1) ? "1" : "0";
             }
             if (ind1 > ind2)
             {
@@ -49,14 +45,7 @@ namespace Hepta
             }
             for (int index = SmallerIndex + 1; index < BiggerIndex; index++)
             {
-                if (hepta.Contains(index))
-                {
-                    bit.Append("1");
-                }
-                else
-                {
-                    bit.Append("0");
-                }
+                bit.Append(hepta.Contains(index) ? 1 : 0);
             }
             return bit.ToString();
         }
