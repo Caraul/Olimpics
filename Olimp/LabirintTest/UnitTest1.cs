@@ -10,9 +10,9 @@ namespace LabirintTest
         [TestMethod]
         public void ExprTest()
         {
-            var variables = new List<int>() {2, 3, 4, 5};
+            var variables = new int[4] {2, 3, 4, 5};
             var postfix = "7 2 1 -3 0 -2 3 -1";
-            var expr1 = new expr(postfix, variables);
+            var expr1 = new Expr(postfix, variables);
             Assert.AreEqual(expr1.ExprNum, 15);
         }
     }
