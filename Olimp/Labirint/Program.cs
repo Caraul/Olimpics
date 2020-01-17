@@ -14,8 +14,8 @@ namespace Labirint
                 variables[index1] = Int32.Parse(Console.ReadLine());
             }
             var postfix = Console.ReadLine();
-            var expr1 = new Expr(postfix, variables);
-            Console.WriteLine(expr1.ExprNum);
+            var expr1 = new Expr(postfix);
+            Console.WriteLine(expr1.CountExprNum(variables));
         }
     }
 }
