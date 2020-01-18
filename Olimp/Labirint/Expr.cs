@@ -1,32 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Labirint
 {
     public class Expr
     {
-        public int[] PostfixVariables;
+        int[] PostfixVariables;
         public Expr(String postfix)
         {
-            PostfixVariables = new int[postfix.Split(" ").Length];
-            for (int index = 0; index != postfix.Split(" ").Length; index++)
-            {
-                PostfixVariables[index] = Int32.Parse(postfix.Split(" ")[index]);
-            }
+            PostfixVariables = postfix.Split(" ").Select(part => Int32.Parse(part)).Skip(1).ToArray();
         }
         public int CountExprNum(int[] variables)
         {
             var ExprVariables = new Stack<int>();
-            for (int WasAdded = 0, index = 1; WasAdded != PostfixVariables[0]; WasAdded++, index++)
+            foreach (var Variable in PostfixVariables)
             {
-                if (PostfixVariables[index] >= 0)
+                if (Variable >= 0)
                 {
-                    ExprVariables.Push(variables[PostfixVariables[index]]);
+                    ExprVariables.Push(variables[Variable]);
                 }
                 else
                 {
-                    switch (PostfixVariables[index])
+                    switch (Variable)
                     {
                         case -1:
                             ExprVariables.Push(ExprVariables.Pop() + ExprVariables.Pop());
