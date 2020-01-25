@@ -7,9 +7,10 @@ namespace Labirint
     public class Expr
     {
         int[] PostfixVariables;
-        public Expr(String postfix)
+        public Expr(int[] postfixVariables)
         {
-            PostfixVariables = postfix.Split(" ").Select(part => Int32.Parse(part)).Skip(1).ToArray();
+            PostfixVariables = postfixVariables;
+           // PostfixVariables = postfix.Split(" ").Select(part => Int32.Parse(part)).Skip(4).ToArray();
         }
         public int CountExprNum(int[] variables)
         {
