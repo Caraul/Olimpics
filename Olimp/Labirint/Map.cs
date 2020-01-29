@@ -22,6 +22,10 @@ namespace Labirint
                 {
                     tunnels[index].HasExit = true;
                 }
+                else
+                {
+                    tunnels[index].HasExit = false;
+                }
             }
         }
     }
