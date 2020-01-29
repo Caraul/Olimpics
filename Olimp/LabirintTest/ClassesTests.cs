@@ -40,8 +40,8 @@ namespace LabirintTest
             Assert.AreEqual(map.tunnels.Length, 5);
             Assert.AreEqual(map.rooms1.Length, 3);
             Assert.AreEqual(map.rooms2.Length, 4);
-            Assert.IsTrue(map.tunnels[1].IsHaveExit);
-            Assert.IsTrue(map.tunnels[2].IsHaveExit);
+            Assert.IsTrue(map.tunnels[1].HasExit);
+            Assert.IsTrue(map.tunnels[2].HasExit);
         }
     }
 }

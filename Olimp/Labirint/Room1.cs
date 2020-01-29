@@ -16,10 +16,9 @@ namespace Labirint
             IndexOfVariable = descriptionOfRoomArray[2];
             PostfixVariables = descriptionOfRoomArray.Skip(4).ToArray();
         }
-        public int[] WalkedThrough(int[] variables)
+        public void WalkedThrough(int[] variables)
         {
             variables[IndexOfVariable] = new Expr(PostfixVariables).CountExprNum(variables);
-            return variables;
         }
     }
 }

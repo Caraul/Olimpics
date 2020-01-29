@@ -20,7 +20,7 @@ namespace Labirint
                 tunnels[index] = new Tunnel();
                 if (index <= descriptionOfMapArray[3] && index != 0)
                 {
-                    tunnels[index].IsHaveExit = true;
+                    tunnels[index].HasExit = true;
                 }
             }
         }

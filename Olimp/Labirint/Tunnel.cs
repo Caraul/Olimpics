@@ -5,7 +5,7 @@ namespace Labirint
 {
     public class Tunnel
     {
-        public bool IsHaveExit = false;
+        public bool HasExit { get; set; } = false;
         public int[] IndexOfRoom1TunnelGo;
         public int[] IndexOfRoom2TunnelGo;
     }
