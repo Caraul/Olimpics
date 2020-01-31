@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeptaTest", "HeptaTest\Hept
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labirint", "Labirint\Labirint.csproj", "{FCE53DD2-6CFD-4778-A320-654B9CBDB6FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabirintTest", "LabirintTest\LabirintTest.csproj", "{8560C2F8-3150-48C6-BC7D-6EC22710990A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabirintTest", "LabirintTest\LabirintTest.csproj", "{8560C2F8-3150-48C6-BC7D-6EC22710990A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
