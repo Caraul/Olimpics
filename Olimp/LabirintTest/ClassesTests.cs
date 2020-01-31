@@ -20,7 +20,8 @@ namespace LabirintTest
         {
             var room1 = new Room1("1 2 0 7 2 1 -3 0 -2 3 -1");
             var variables = new int[4] { 2, 3, 4, 5 };
-            Assert.AreEqual(room1.WalkedThrough(variables)[0], 15);
+            room1.WalkedThrough(variables);
+            Assert.AreEqual(variables[0], 15);
         }
         [TestMethod]
         public void Room2Test()

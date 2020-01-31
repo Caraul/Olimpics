@@ -6,9 +6,9 @@ namespace Labirint
 {
     public class Map
     {
-        public Tunnel[] tunnels;
-        public Room1[] rooms1;
-        public Room2[] rooms2;
+        public Tunnel[] tunnels { get; set; }
+        public Room1[] rooms1 { get; set; }
+        public Room2[] rooms2 { get; set; }
         public Map(string descriptionOfMap)
         {
             var descriptionOfMapArray = descriptionOfMap.Split(" ").Select(part => int.Parse(part)).ToArray();
@@ -18,14 +18,7 @@ namespace Labirint
             for (var index = 0; index != tunnels.Length; index++)
             {
                 tunnels[index] = new Tunnel();
-                if (index <= descriptionOfMapArray[3] && index != 0)
-                {
-                    tunnels[index].HasExit = true;
-                }
-                else
-                {
-                    tunnels[index].HasExit = false;
-                }
+                tunnels[index].HasExit = index <= descriptionOfMapArray[3] && index != 0;
             }
         }
     }

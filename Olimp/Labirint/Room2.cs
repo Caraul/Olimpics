@@ -7,7 +7,7 @@ namespace Labirint
     public class Room2
     {
         int IndexOfTunnelPigWillGoToThroughPositive, IndexOfTunnelPigWillGoToThroughNegative, IndexOfTunnelPigWillGoToThroughNull;
-        public int IndexOfTunnelPigCameFrom;
+        public int IndexOfTunnelPigCameFrom { get; set; }
         int[] PostfixVariables;
         public Room2(string descriptionOfRoom)
         {
